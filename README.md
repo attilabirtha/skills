@@ -1,71 +1,61 @@
-# ProClick Price Offer Skill
+# Skills
 
-Reusable AI-agent skill for generating ProClick-style commercial offer PDFs.
+Reusable AI-agent skills maintained by Attila Birtha.
 
-The package contains:
+This repository is structured as a multi-skill catalog. Each skill lives in its own folder under `skills/` and can be copied, installed, or referenced independently by Codex, OpenClaw, Claude Code, Cursor, or other coding agents.
 
-- `SKILL.md` - Codex-compatible skill instructions
-- `AGENTS.md` - generic instructions for OpenClaw, Claude Code, Cursor, and other AI coding agents
-- `scripts/generate_offer.py` - ReportLab generator for the branded PDF
-- `assets/` - ProClick logo and cover background assets
+## Available Skills
 
-## What It Generates
+### `proclick-price-offer`
 
-The generator reproduces the look and feel of the ProClick agency offer created for ZEILA:
+Generate ProClick-style commercial offer PDFs using the look and feel of the ProClick agency presentation.
 
-- cover with team-photo background and dark overlay
-- cream interior pages
-- dark strategy page
-- red ProClick accent rules
-- white offer cards with red top borders
-- media allocation table
-- simplified PPC KPI table
-- company data block
-
-## Quick Start
-
-Install dependencies:
+Path:
 
 ```bash
-python3 -m pip install -r requirements.txt
+skills/proclick-price-offer
 ```
 
-Generate a PDF:
+Run directly:
 
 ```bash
+cd skills/proclick-price-offer
 python3 scripts/generate_offer.py --output outputs/proclick_offer.pdf
 ```
 
-## Use With Codex
-
-Copy this folder to:
+Install for Codex:
 
 ```bash
-~/.codex/skills/proclick-price-offer
+cp -R skills/proclick-price-offer ~/.codex/skills/
 ```
 
-Then ask:
+Then invoke:
 
 ```text
 Use $proclick-price-offer to create a branded ProClick commercial offer PDF.
 ```
 
-## Use With OpenClaw Or Other Agents
-
-Point the agent to `AGENTS.md` and ask it to follow the workflow. The script is self-contained and can be patched for client-specific offer content.
-
-Example:
+## Repository Layout
 
 ```text
-Use the instructions in AGENTS.md to create a ProClick-style price offer for a Shopify eCommerce client.
+skills/
+  proclick-price-offer/
+    SKILL.md
+    AGENTS.md
+    agents/openai.yaml
+    assets/
+    scripts/
+    requirements.txt
 ```
 
-## Requirements
+## Adding A New Skill
 
-- Python 3.10+
-- `reportlab`
-- optional for visual verification: Poppler `pdftoppm`
+Create a new folder under `skills/<skill-name>/` with:
 
-## Notes
+- `SKILL.md` for Codex-compatible instructions
+- `AGENTS.md` for generic AI-agent usage
+- optional `agents/openai.yaml`
+- optional `assets/`, `scripts/`, `references/`
+- optional `requirements.txt` for Python dependencies
 
-The included script is intentionally simple and editable. For a new client proposal, patch `scripts/generate_offer.py` content sections, regenerate the PDF, and render pages to PNG for visual review before delivery.
+Keep each skill self-contained so agents can copy or use only the folder they need.

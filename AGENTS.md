@@ -1,60 +1,27 @@
-# Agent Instructions
+# Repository Agent Instructions
 
-Use this repository when asked to create or revise a ProClick-style commercial offer PDF.
+This is a multi-skill repository. Each skill is self-contained under `skills/<skill-name>/`.
 
-## Goal
+## For AI Agents
 
-Generate a polished ProClick offer using the bundled assets and the existing ReportLab generator. Preserve the established look:
+When the user asks to use or modify a skill:
 
-- team-photo cover with dark overlay
-- cream pages for services, budget, and KPIs
-- one dark strategy page
-- red accent bars
-- white cards with red top borders
-- black recommendation blocks
-- pale green optimization callout
+1. Identify the relevant folder under `skills/`.
+2. Read that skill's `SKILL.md`.
+3. If present, read that skill's `AGENTS.md`.
+4. Use only that skill's bundled `assets/`, `scripts/`, and `references/` unless the task explicitly requires repository-wide changes.
+5. Keep each skill portable; do not add dependencies on local absolute paths.
 
-## Files
+## Current Skills
 
-- `scripts/generate_offer.py` - primary editable generator
-- `assets/proclick_logo.png` - logo for light backgrounds
-- `assets/proclick_logo_white.png` - logo for dark/photo backgrounds
-- `assets/proclick_team_cover.png` - cover background
-- `SKILL.md` - Codex skill instructions
+- `skills/proclick-price-offer` - generate branded ProClick commercial offer PDFs.
 
-## Workflow
+## Validation
 
-1. Read the user request and identify changes to client name, offer title, budgets, services, channel mix, KPI wording, and company details.
-2. Patch `scripts/generate_offer.py`; keep the visual system intact unless the user explicitly asks for a different design.
-3. Generate the PDF:
+For Codex skills, validate with Codex's `quick_validate.py` when available:
 
 ```bash
-python3 scripts/generate_offer.py --output outputs/proclick_offer.pdf
+python3 /path/to/quick_validate.py skills/<skill-name>
 ```
 
-4. Render pages for review when Poppler is available:
-
-```bash
-pdftoppm -png outputs/proclick_offer.pdf tmp/proclick_offer
-```
-
-5. Inspect the rendered pages for clipped text, poor contrast, wrong totals, and inconsistent budget sums.
-
-## Content Rules
-
-- Keep offer copy concise and commercial.
-- Keep KPI sections focused on PPC metrics unless the user asks for broader metrics.
-- Recalculate budget amounts when percentages change.
-- Keep service fee, media budget, and total budget consistent across all pages.
-- Use ASCII text in PDF content unless Romanian font rendering is verified.
-
-## Default Company Data
-
-Use these details unless the user changes them:
-
-- INTELLIGENT DIGITAL MARKETING SRL
-- CUI: RO16554762
-- Piata Victoriei nr. 5, Targu-Mures, Romania
-- contact@proclick.ro
-- +40 744 692 880
-- proclick.ro
+For script-based skills, also run the skill's main script from inside its folder.

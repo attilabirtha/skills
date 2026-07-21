@@ -34,7 +34,7 @@ Use `scripts/generate_offer.py` as the starting point for ProClick offer PDFs.
 Run:
 
 ```bash
-python3 /Users/attilabirtha.ro/.codex/skills/proclick-price-offer/scripts/generate_offer.py --output outputs/proclick_oferta_client.pdf
+python3 scripts/generate_offer.py --output outputs/proclick_oferta_client.pdf
 ```
 
 The script uses ReportLab and local system fonts. If `reportlab` is missing, install it in the active Python environment or use the bundled workspace runtime when available.
