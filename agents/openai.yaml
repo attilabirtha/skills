@@ -1,0 +1,5 @@
+interface:
+  display_name: "ProClick Price Offer"
+  short_description: "Generate branded ProClick offer PDFs"
+  default_prompt: "Use $proclick-price-offer to create a branded ProClick commercial offer PDF."
+  brand_color: "#EF493E"
