@@ -16,6 +16,7 @@ Create polished ProClick offer PDFs with the same visual system as the ZEILA pro
 - white service cards with red top rule
 - black conclusion blocks and pale green recommendation blocks
 - official ProClick company data and assets
+- price hierarchy with VAT-included values primary and net values secondary
 
 ## Assets
 
@@ -39,6 +40,10 @@ python3 scripts/generate_offer.py --output outputs/proclick_oferta_client.pdf
 
 The script uses ReportLab and local system fonts. If `reportlab` is missing, install it in the active Python environment or use the bundled workspace runtime when available.
 
+## References
+
+Read `references/offer-elements.md` when the offer needs detailed service modules, VAT pricing hierarchy, media allocation options, CSS Partner wording, PPC KPI wording, or final validation rules.
+
 ## Workflow
 
 1. Copy or patch `scripts/generate_offer.py` only when the offer content needs to change.
@@ -56,6 +61,13 @@ Use this structure unless the user asks otherwise:
 3. Strategy: dark page with three-stage launch approach.
 4. Media allocation: table with channel percentages, amounts, and role.
 5. KPI/reporting/company: PPC KPIs, reporting cadence, Shopify/eCommerce notes, company data.
+
+## Default Offer Elements
+
+- Display VAT-included prices as the main values. Display net prices below them in smaller muted text.
+- For focused eCommerce launch offers, default to Google Ads and Meta Ads unless TikTok, YouTube, Pinterest, or other channels are explicitly requested.
+- Mention CSS Partner support in the feed/Shopping service card when Google Shopping is included.
+- Keep the first-month strategy realistic: validate tracking, messages, and products sellable for promotion and sales before scaling.
 
 ## Style Rules
 

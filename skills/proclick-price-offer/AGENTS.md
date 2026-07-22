@@ -20,32 +20,36 @@ Generate a polished ProClick offer using the bundled assets and the existing Rep
 - `assets/proclick_logo.png` - logo for light backgrounds
 - `assets/proclick_logo_white.png` - logo for dark/photo backgrounds
 - `assets/proclick_team_cover.png` - cover background
+- `references/offer-elements.md` - reusable content rules for pricing, services, media allocation, KPIs, and validation
 - `SKILL.md` - Codex skill instructions
 
 ## Workflow
 
 1. Read the user request and identify changes to client name, offer title, budgets, services, channel mix, KPI wording, and company details.
-2. Patch `scripts/generate_offer.py`; keep the visual system intact unless the user explicitly asks for a different design.
-3. Generate the PDF:
+2. Read `references/offer-elements.md` if the offer needs detailed services, VAT handling, channel choices, or validation rules.
+3. Patch `scripts/generate_offer.py`; keep the visual system intact unless the user explicitly asks for a different design.
+4. Generate the PDF:
 
 ```bash
 python3 scripts/generate_offer.py --output outputs/proclick_offer.pdf
 ```
 
-4. Render pages for review when Poppler is available:
+5. Render pages for review when Poppler is available:
 
 ```bash
 pdftoppm -png outputs/proclick_offer.pdf tmp/proclick_offer
 ```
 
-5. Inspect the rendered pages for clipped text, poor contrast, wrong totals, and inconsistent budget sums.
+6. Inspect the rendered pages for clipped text, poor contrast, wrong totals, and inconsistent budget sums.
 
 ## Content Rules
 
 - Keep offer copy concise and commercial.
+- Use VAT-included prices as primary values and net prices as smaller secondary values when both are required.
 - Keep KPI sections focused on PPC metrics unless the user asks for broader metrics.
 - Recalculate budget amounts when percentages change.
 - Keep service fee, media budget, and total budget consistent across all pages.
+- Keep the channels named in services, strategy, and budget allocation consistent.
 - Use ASCII text in PDF content unless Romanian font rendering is verified.
 
 ## Default Company Data

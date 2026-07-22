@@ -70,7 +70,10 @@ def make_styles():
     st.add(ParagraphStyle("CardTitleDark", fontName="PC-Bold", fontSize=11.5, leading=14, textColor=colors.white, spaceAfter=4))
     st.add(ParagraphStyle("Metric", fontName="PC-Bold", fontSize=22, leading=24, textColor=RED, alignment=TA_CENTER))
     st.add(ParagraphStyle("MetricDark", fontName="PC-Bold", fontSize=22, leading=24, textColor=colors.white, alignment=TA_CENTER))
+    st.add(ParagraphStyle("MetricSmall", fontName="PC-Bold", fontSize=14.2, leading=16.2, textColor=RED, alignment=TA_CENTER))
+    st.add(ParagraphStyle("MetricSmallDark", fontName="PC-Bold", fontSize=14.2, leading=16.2, textColor=colors.white, alignment=TA_CENTER))
     st.add(ParagraphStyle("MetricLabel", fontName="PC", fontSize=8, leading=10, textColor=MUTED, alignment=TA_CENTER))
+    st.add(ParagraphStyle("MetricLabelDark", fontName="PC", fontSize=8, leading=10, textColor=colors.HexColor("#E8E1DA"), alignment=TA_CENTER))
     st.add(ParagraphStyle("TableHead", fontName="PC-Bold", fontSize=8.3, leading=10, textColor=colors.white))
     return st
 
@@ -145,10 +148,14 @@ def doc_template(output_path: Path):
 
 def metric_cards(st):
     data = [
-        [p("9.000 lei", st["Metric"]), p("26.000 lei", st["MetricDark"]), p("35.000 lei", st["Metric"])],
-        [p("servicii ProClick", st["MetricLabel"]), p("buget media", st["MetricLabel"]), p("investitie totala", st["MetricLabel"])],
+        [
+            p("10.710 lei TVA inclus<br/><font color='#77706A' size='10'>9.000 lei + TVA</font>", st["MetricSmall"]),
+            p("24.290 lei TVA inclus<br/><font color='#E8E1DA' size='10'>20.411,76 lei + TVA</font>", st["MetricSmallDark"]),
+            p("35.000 lei TVA inclus<br/><font color='#77706A' size='10'>29.411,76 lei + TVA</font>", st["MetricSmall"]),
+        ],
+        [p("servicii ProClick", st["MetricLabel"]), p("buget media", st["MetricLabelDark"]), p("investitie totala", st["MetricLabel"])],
     ]
-    table = Table(data, colWidths=[50 * mm, 50 * mm, 50 * mm], rowHeights=[17 * mm, 12 * mm])
+    table = Table(data, colWidths=[50 * mm, 50 * mm, 50 * mm], rowHeights=[24 * mm, 10 * mm])
     table.setStyle(
         TableStyle(
             [
@@ -188,7 +195,7 @@ def service_grid(st):
     cards = [
         white_card("Strategie de lansare", "Pozitionare, funnel, segmentare, calendar 90 zile, directii de mesaj si prioritizare produse.", st, "01"),
         white_card("Audit tracking", "GA4, GTM, Meta Pixel, Shopify events, conversii Google Ads, UTM si calitatea datelor.", st, "02"),
-        white_card("Administrare PPC", "Google Search/Shopping/PMax, Meta prospecting/remarketing, TikTok tests si YouTube video.", st, "03"),
+        white_card("Administrare PPC", "Google Search/Shopping/PMax, Meta prospecting si remarketing, catalog ads, creatii statice/video si optimizare spre vanzari.", st, "03"),
         white_card("Optimizare conversii", "Audit UX pentru homepage, colectii, produs, cos si checkout; prioritati CRO cu impact comercial.", st, "04"),
         white_card("Optimizare feed + CSS", "Titluri, categorii, atribute si feed pentru Shopping. Include avantaj CSS Partner: pana la 20% discount aplicabil in Google Shopping.", st, "05"),
         white_card("Raportare consolidata", "Dashboard si raport lunar cu spend, venit, ROAS, POAS, CAC, AOV si produse castigatoare.", st, "06"),
@@ -199,10 +206,8 @@ def service_grid(st):
 def media_table(st):
     rows = [
         [p("Canal", st["TableHead"]), p("Buget", st["TableHead"]), p("Rol", st["TableHead"])],
-        [p("Google Ads", st["CardTitle"]), p("30% / 7.800 lei", st["Body"]), p("Search brand/non-brand, Shopping/PMax, CSS Partner cu discount de pana la 20% si intentie clara.", st["Body"])],
-        [p("Meta Ads", st["CardTitle"]), p("45% / 11.700 lei", st["Body"]), p("Canal principal pentru social: prospectare vizuala, catalog ads, retargeting, add-to-cart si checkout.", st["Body"])],
-        [p("TikTok Ads", st["CardTitle"]), p("15% / 3.900 lei", st["Body"]), p("Hook-uri video, testare mesaje lifestyle/decor/cadou si audiente noi.", st["Body"])],
-        [p("YouTube Ads", st["CardTitle"]), p("10% / 2.600 lei", st["Body"]), p("Reach calificat, recaptare si sustinerea cautarilor ulterioare in Google.", st["Body"])],
+        [p("Google Ads", st["CardTitle"]), p("40%<br/><b>9.716 lei TVA inclus</b><br/><font color='#77706A' size='8'>8.164,71 lei + TVA</font>", st["Body"]), p("Search brand/non-brand, Shopping/PMax, CSS Partner cu discount de pana la 20% si intentie clara de cumparare.", st["Body"])],
+        [p("Meta Ads", st["CardTitle"]), p("60%<br/><b>14.574 lei TVA inclus</b><br/><font color='#77706A' size='8'>12.247,06 lei + TVA</font>", st["Body"]), p("Canal principal pentru social: prospectare vizuala, catalog ads, remarketing, add-to-cart, checkout si validare creativa.", st["Body"])],
     ]
     t = Table(rows, colWidths=[35 * mm, 35 * mm, 84 * mm], repeatRows=1)
     t.setStyle(
@@ -230,7 +235,7 @@ def dark_process(st):
         [p("Pregatire", st["CardTitleDark"]), p("Lansare", st["CardTitleDark"]), p("Optimizare", st["CardTitleDark"])],
         [
             p("Audit tracking, Shopify, feed, KPI, produse prioritare si primele directii creative.", st["BodyDark"]),
-            p("Google pentru intentie, Meta pentru cerere noua, TikTok/YouTube pentru testare video.", st["BodyDark"]),
+            p("Google pentru intentie si Meta pentru cerere noua, social proof, catalog ads si remarketing.", st["BodyDark"]),
             p("Buget mutat catre canalele, audientele si produsele vandabile pentru promovare si vanzare.", st["BodyDark"]),
         ],
     ]
@@ -313,7 +318,7 @@ def story(st):
     s.append(PageBreak())
 
     s.append(p("Alocarea bugetului media.", st["H1"]))
-    s.append(p("Bugetul total ramane 35.000 lei: 9.000 lei servicii ProClick si 26.000 lei investitie directa in platformele publicitare.", st["BodyMuted"]))
+    s.append(p("Bugetul total ramane 35.000 lei TVA inclus: servicii ProClick 9.000 lei + TVA (10.710 lei TVA inclus) si buget media 20.411,76 lei + TVA (24.290 lei TVA inclus).", st["BodyMuted"]))
     s.append(Spacer(1, 8 * mm))
     s.append(media_table(st))
     s.append(Spacer(1, 10 * mm))
