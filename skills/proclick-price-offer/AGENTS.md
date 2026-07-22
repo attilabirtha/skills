@@ -20,7 +20,7 @@ Generate a polished ProClick offer using the bundled assets and the existing Rep
 - `assets/proclick_logo.png` - logo for light backgrounds
 - `assets/proclick_logo_white.png` - logo for dark/photo backgrounds
 - `assets/proclick_team_cover.png` - cover background
-- `references/offer-elements.md` - reusable content rules for pricing, services, media allocation, KPIs, and validation
+- `references/offer-elements.md` - reusable content rules for pricing, services, focused and complete media allocation, KPIs, and validation
 - `SKILL.md` - Codex skill instructions
 
 ## Workflow
@@ -49,7 +49,7 @@ pdftoppm -png outputs/proclick_offer.pdf tmp/proclick_offer
 - Keep KPI sections focused on PPC metrics unless the user asks for broader metrics.
 - Recalculate budget amounts when percentages change.
 - Keep service fee, media budget, and total budget consistent across all pages.
-- Keep the channels named in services, strategy, and budget allocation consistent.
+- Keep the channels named in services, strategy, and budget allocation consistent. Use a complete mix with Google, Meta, TikTok, YouTube, and Pinterest when the offer requires full-channel coverage.
 - Use ASCII text in PDF content unless Romanian font rendering is verified.
 
 ## Default Company Data

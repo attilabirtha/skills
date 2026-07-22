@@ -35,18 +35,30 @@ Use this line when expectations need calibration:
 
 ## Media Allocation
 
-Default eCommerce launch mix when social is expected to matter more:
+Pick the mix based on the offer objective, total media budget, available creative assets, and how broad the launch needs to be.
+
+Focused eCommerce launch mix when concentration matters more than channel coverage:
 
 - Google Ads: 40%
 - Meta Ads: 60%
 
-Optional channels only when requested or justified by content and budget:
+Complete eCommerce launch mix when the offer should cover all major paid channels:
 
+- Google Ads: 30%
+- Meta Ads: 45%
+- TikTok Ads: 10%
+- YouTube Ads: 10%
+- Pinterest Ads: 5%
+
+Channel roles:
+
+- Google Ads: for search demand capture, Shopping/PMax, CSS Partner advantage, and high-intent traffic.
+- Meta Ads: for visual prospecting, catalog ads, remarketing, social proof, add-to-cart and checkout optimization.
 - TikTok Ads: for short-form video hook tests and new audiences.
 - YouTube Ads: for video reach, remarketing, and search lift.
 - Pinterest Ads: for decor, lifestyle, gifting, interior, and inspiration-led categories.
 
-Do not include TikTok, YouTube, or Pinterest automatically if the user asks to keep services and budgets focused on Google and Meta.
+Do not include every channel automatically when the media budget is too small, creative assets are missing, or the user asks to keep services and budgets focused. If the user asks for a complete mix, include all relevant channels and make the percentages sum to 100%.
 
 ## PPC KPI Set
 

@@ -42,7 +42,7 @@ The script uses ReportLab and local system fonts. If `reportlab` is missing, ins
 
 ## References
 
-Read `references/offer-elements.md` when the offer needs detailed service modules, VAT pricing hierarchy, media allocation options, CSS Partner wording, PPC KPI wording, or final validation rules.
+Read `references/offer-elements.md` when the offer needs detailed service modules, VAT pricing hierarchy, focused or complete media allocation options, CSS Partner wording, PPC KPI wording, or final validation rules.
 
 ## Workflow
 
@@ -65,7 +65,7 @@ Use this structure unless the user asks otherwise:
 ## Default Offer Elements
 
 - Display VAT-included prices as the main values. Display net prices below them in smaller muted text.
-- For focused eCommerce launch offers, default to Google Ads and Meta Ads unless TikTok, YouTube, Pinterest, or other channels are explicitly requested.
+- Choose the media mix by objective and budget: use a focused mix for concentrated launch pressure, or a complete mix with Google, Meta, TikTok, YouTube, and Pinterest when the offer requires full-channel coverage.
 - Mention CSS Partner support in the feed/Shopping service card when Google Shopping is included.
 - Keep the first-month strategy realistic: validate tracking, messages, and products sellable for promotion and sales before scaling.
 
