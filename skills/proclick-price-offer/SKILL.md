@@ -1,21 +1,21 @@
 ---
 name: proclick-price-offer
-description: Create or update branded ProClick commercial offer PDFs that replicate the latest ProClick proposal style. Use when asked to prepare, revise, restyle, or regenerate a ProClick/proClick offer, pricing proposal, PPC/eCommerce marketing offer, or client PDF using the current ProClick visual system, including client-specific scope, channel mix, cover layout, and pricing mode.
+description: Create or update branded proClick commercial offer PDFs that replicate the latest proClick proposal style. Use when asked to prepare, revise, restyle, or regenerate a proClick/proClick offer, pricing proposal, PPC/eCommerce marketing offer, or client PDF using the current proClick visual system, including client-specific scope, channel mix, cover layout, and pricing mode.
 ---
 
-# ProClick Price Offer
+# proClick Price Offer
 
 ## Purpose
 
-Create polished ProClick offer PDFs with the current ProClick visual system:
+Create polished proClick offer PDFs with the current proClick visual system:
 
 - cover with team-photo background, dark overlay, white logo, large white headline
 - warm cream interior pages
 - dark strategy page
-- red ProClick accent bars and card borders
+- red proClick accent bars and card borders
 - white service cards with red top rule
 - black conclusion blocks and pale green recommendation blocks
-- official ProClick company data and assets
+- official proClick company data and assets
 - flexible pricing display: either `TVA inclus` hierarchy or `net + TVA`, depending on the brief
 
 ## Assets
@@ -32,7 +32,7 @@ If the current offer uses a newer or wider team photo from the repo/workspace, p
 
 ## Generator
 
-Use `scripts/generate_offer.py` as the starting point for ProClick offer PDFs.
+Use `scripts/generate_offer.py` as the starting point for proClick offer PDFs.
 
 Run:
 
@@ -85,5 +85,5 @@ Use this structure unless the user asks otherwise:
 - Keep monetary values internally consistent across cover, media allocation, and narrative text.
 - Keep scope wording internally consistent across service cards, channel tables, commercial page, and cover summary.
 - Use ASCII text in generated PDFs to avoid glyph issues unless the environment has verified Romanian font rendering.
-- Preserve ProClick company details unless the user explicitly changes them:
+- Preserve proClick company details unless the user explicitly changes them:
   `INTELLIGENT DIGITAL MARKETING SRL`, `CUI: RO16554762`, `Piata Victoriei nr. 5, Targu-Mures, Romania`, `contact@proclick.ro`, `+40 744 692 880`, `proclick.ro`.

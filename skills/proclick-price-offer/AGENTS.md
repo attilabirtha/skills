@@ -1,10 +1,10 @@
 # Agent Instructions
 
-Use this repository when asked to create or revise a ProClick-style commercial offer PDF.
+Use this repository when asked to create or revise a proClick-style commercial offer PDF.
 
 ## Goal
 
-Generate a polished ProClick offer using the bundled assets and the existing ReportLab generator. Run commands from this skill folder unless noted otherwise. Preserve the established look:
+Generate a polished proClick offer using the bundled assets and the existing ReportLab generator. Run commands from this skill folder unless noted otherwise. Preserve the established look:
 
 - team-photo cover with dark overlay
 - cream pages for services, budget, and KPIs
