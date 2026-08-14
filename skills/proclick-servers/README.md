@@ -1,4 +1,4 @@
-# proclick-ssh-servers
+# proclick-servers
 
 Connect to Proclick's servers (`services-proclick`, `agents-proclick`)
 and the `birtha` home server over SSH via the `ssh-mcp` toolset.
@@ -21,5 +21,5 @@ and troubleshooting.
 ## Invoke
 
 ```text
-Use $proclick-ssh-servers to check the servers / run a command / transfer files.
+Use $proclick-servers to check the servers / run a command / transfer files / manage Cloudflare.
 ```

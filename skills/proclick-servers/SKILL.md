@@ -1,14 +1,15 @@
 ---
-name: proclick-ssh-servers
+name: proclick-servers
 description: |
   Connect to Proclick's servers (services-proclick, agents-proclick) and
-  the birtha home server over SSH via the ssh-mcp toolset. Triggers when
-  the user asks to run commands, check status, read logs, transfer files,
-  or work on the services box, the agents box, or the home server (n8n),
-  or mentions the headscale tailnet / .headscale hostnames.
+  the birtha home server over SSH via the ssh-mcp toolset, plus the
+  Cloudflare account behind the domains. Triggers when the user asks to
+  run commands, check status, read logs, transfer files, or work on the
+  services box, the agents box, or the home server (n8n), or mentions
+  the headscale tailnet / .headscale hostnames or Cloudflare.
 ---
 
-# SSH Access to Proclick's Servers
+# Proclick's Servers & Cloudflare
 
 Connect to the Proclick servers through the SSH MCP toolset
 (`ssh-mcp_*` tools). All servers are on a private Tailscale/headscale

@@ -1,4 +1,4 @@
-# Skill Agent Instructions: proclick-ssh-servers
+# Skill Agent Instructions: proclick-servers
 
 This skill grants SSH access to Proclick's servers via the `ssh-mcp`
 toolset. The servers are production infrastructure — treat them with care.
