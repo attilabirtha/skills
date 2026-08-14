@@ -15,6 +15,7 @@ When the user asks to use or modify a skill:
 ## Current Skills
 
 - `skills/proclick-price-offer` - generate branded ProClick commercial offer PDFs.
+- `skills/proclick-ssh-servers` - SSH access to Proclick's servers (services-proclick, agents-proclick) and the birtha home server via the ssh-mcp toolset.
 
 ## Validation
 

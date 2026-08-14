@@ -35,6 +35,27 @@ Then invoke:
 Use $proclick-price-offer to create a branded ProClick commercial offer PDF.
 ```
 
+### `proclick-ssh-servers`
+
+Connect to Proclick's servers (`services-proclick`, `agents-proclick`)
+and the `birtha` home server over SSH via the `ssh-mcp` toolset.
+
+Path:
+
+```bash
+skills/proclick-ssh-servers
+```
+
+Requirements: the `ssh-mcp` MCP server configured with
+`~/.config/ssh-mcp/config.toml`, access to the headscale tailnet, and
+SSH key / password credentials (see the skill's `README.md`).
+
+Then invoke:
+
+```text
+Use $proclick-ssh-servers to check the servers / run a command / transfer files.
+```
+
 ## Repository Layout
 
 ```text
@@ -46,6 +67,10 @@ skills/
     assets/
     scripts/
     requirements.txt
+  proclick-ssh-servers/
+    SKILL.md
+    AGENTS.md
+    README.md
 ```
 
 ## Adding A New Skill
