@@ -124,6 +124,52 @@ Host services: docker, containerd, tailscaled, fail2ban.
 
 ---
 
+## Cloudflare infrastructure
+
+Cloudflare is the DNS/CDN layer for the Proclick domains. Managed via a
+separate Cloudflare account (OAuth login), not via SSH.
+
+### Account
+
+- Email: `attila.birtha@proclick.ro`
+- Account ID: `fafcaa36fb222caf8ff32a61d322ffd7`
+- Zones (4, all active): `birtha.ro`, `proclick.eu`, `proclick.hu`,
+  `proclick.ro`
+- Currently deployed: 0 Workers, 0 D1 databases, 0 KV namespaces.
+  R2 is not enabled (needs opt-in in the Cloudflare dashboard).
+
+### How to connect (3 ways, in order of preference)
+
+1. **Cloudflare MCP server (recommended)** — hosted, covers the whole
+   Cloudflare API (Workers, KV, R2, D1, Pages, zones/DNS, AI, Queues):
+   - URL: `https://mcp.cloudflare.com/mcp` (Code Mode, ~1k tokens,
+     2500+ endpoints)
+   - In OpenWork: Settings > Extensions > Add Custom App → name
+     `cloudflare`, URL above, **Requires OAuth ON** → approve in browser
+     (one-time). Tools appear after restart.
+   - This is the ONLY MCP setup to use. Do **not** use the npm package
+     `@cloudflare/mcp-server-cloudflare` — its `zones_list` tool returns
+     hardcoded mock data (`example.com`/`test.com`), a bug in v0.2.0.
+2. **`wrangler` CLI** — already installed globally (`wrangler@4.86.0`).
+   Authenticated via OAuth (token in
+   `~/Library/Preferences/.wrangler/config/default.toml`).
+   Useful for `wrangler tail`, deploy, etc. from bash.
+3. **Cloudflare API directly** — `curl -H "Authorization: Bearer $TOKEN"`
+   against `api.cloudflare.com/client/v4`. Token is the `oauth_token`
+   field in the wrangler config file (never echo it).
+
+### Notes
+
+- `wrangler whoami` shows the logged-in account. Re-login with
+  `wrangler login` if the token expires.
+- proclick.hu WordPress is behind Cloudflare (188.114.96.x) but the
+  origin server is separate from the tailnet.
+- OAuth scopes include: workers:write, workers_kv:write,
+  workers_scripts:write, d1:write, pages:write, zone:read, ai:write,
+  queues:write, email_routing:write, etc. No R2 scope (matches R2 not
+  being enabled).
+
+
 ## Toolset (11 tools, from ssh-mcp v2)
 
 `list-connections` · `open-session` / `close-session` ·
