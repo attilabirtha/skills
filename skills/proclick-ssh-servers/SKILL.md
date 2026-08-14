@@ -18,9 +18,9 @@ tailnet; all SSH profiles log in as root.
 
 | MCP profile | Tailnet DNS | Hostname | Role |
 | --- | --- | --- | --- |
-| `proclick` | `services-proclick.headscale` | services | Company VPS — services, odoo, headscale/headplane, traefik |
-| `agents-proclick` | `agents-proclick.headscale` | agents-proclick | Company VPS — agents infrastructure |
-| `birtha` | `birtha.headscale` | n8n | Home personal server — runs n8n automation |
+| `proclick` | `services-proclick.headscale` | services | Main company VPS — headscale, traefik, odoo, n8n, agents infra |
+| `agents-proclick` | `agents-proclick.headscale` | agents-proclick | Company agents VPS — hermes, openclaw |
+| `birtha` | `birtha.headscale` | n8n | Home personal server — n8n, ollama/open-webui, vexa, firecrawl |
 
 Tailnet IPs (stable): services `100.64.0.1`, agents `100.64.0.6`,
 birtha `100.64.0.4`. `headplane-proclick` (`100.64.0.2`) is the headscale
@@ -32,6 +32,97 @@ admin UI container running ON the services box, not a separate server.
   `headplane-proclick`)
 - Personal/home: `birtha` (owner's family name) — keep as-is
 - Tailnet DNS always ends in `.headscale`
+
+---
+
+## Architecture
+
+### The tailnet (who connects to whom)
+
+- **Headscale (control server)** runs as a Docker container on
+  `services-proclick`. It is the "coordination" server every other node
+  talks to when joining and when doing NAT traversal; it does **not**
+  carry traffic between nodes.
+  - Container `headscale` (image `headscale/headscale:0.29.3`), config at
+    `/root/docker/headscale/config.yaml` on the host, data in the
+    `headscale_data` volume (sqlite DB + noise keys).
+  - Public control URL: `https://headscale.proclick.ai` (traefik →
+    container port 8080). ACL policy: `/etc/headscale/acl.json` (mounted).
+  - MagicDNS on, base domain `headscale` → every node gets
+    `<hostname>.headscale`. Global DNS servers: 1.1.1.1 / 8.8.8.8.
+  - DERP relays: Tailscale's default DERP map (used when direct
+    connections fail, e.g. some NATs).
+- **Every server + device** runs `tailscaled` and joins the tailnet by
+  pointing at `headscale.proclick.ai`. Members: services, agents,
+  birtha, headplane-proclick (container), macbook, ipad.
+- **SSH from the Mac** goes over the tailnet using MagicDNS names —
+  that is what the ssh-mcp profiles use (`*.headscale`).
+
+### `services-proclick` (100.64.0.1, public 72.60.179.200)
+
+Main company VPS. Runs Docker with one compose project
+(`/root/docker/docker-compose.yml`) plus headscale/headplane compose:
+
+| Container | Purpose | Notes |
+| --- | --- | --- |
+| `headscale` | Tailscale control server | port 8080, metrics 9090 |
+| `headplane` | Headscale admin UI | routed at `headscale.proclick.ai/admin` |
+| `tailscale-headplane` | Tailscale identity for headplane | own node `100.64.0.2`, userspace net |
+| `traefik` | Reverse proxy / TLS | 80+443, Let's Encrypt |
+| `n8n` + `n8n-postgres-db` | Automation workflows | `n8n.proclick.io` |
+| `odoo` + `odoo-postgres-db` | ERP (Odoo 19) | `odoo.proclick.io` / `portal.proclick.eu` |
+| `gotenberg` | PDF rendering | internal |
+| `browser` | Browserless/Chrome | 127.0.0.1:3000 |
+| `openclaw` | OpenClaw agent (gsuite) | `openclaw.proclick.ai` |
+| `opencode` | OpenCode server | 127.0.0.1:4096 |
+| `a2t-dashboard-app` | Internal dashboard | :3000 internal |
+| `backup` | Docker backup automation | volume snapshots |
+
+Host services: docker, containerd, tailscaled, fail2ban.
+
+### `agents-proclick` (100.64.0.6, public 187.124.21.99)
+
+Company agents VPS (Hostinger). Runs agents infrastructure:
+
+| Container | Purpose | Notes |
+| --- | --- | --- |
+| `hermes` | Hermes agent (gsuite) | |
+| `openclaw` | OpenClaw agent (gsuite) | healthy |
+| `openclaw-gdbp-openclaw-1` | Hostinger HVPS OpenClaw | exposed `0.0.0.0:48990` |
+| `traefik-traefik-1` | Reverse proxy | |
+
+Host services: docker, containerd, tailscaled. Fail2ban-style rate
+limiting on SSH (see Host-specific notes).
+
+### `birtha` (100.64.0.4) — home personal server
+
+Runs a larger Docker stack (hostname `n8n`). Key containers:
+
+| Container group | Purpose |
+| --- | --- |
+| `ollama-openwebui-*` | Open WebUI + Ollama (LLM) stack |
+| `n8n` | n8n automation (n8nio/n8n) |
+| `odoo19` + `odoo19-db` | Odoo 19 ERP (localhost only) |
+| `vexa-v012-*` | Vexa AI stack (agent-api, meeting-api, runtime, mcp, gateway, admin-api, postgres, redis, minio) |
+| `hermes-birtha-*` | Hermes agent + gateway |
+| `firecrawl-*` | Firecrawl scraping + playwright + rabbitmq |
+| `evolution-api` | WhatsApp/Evolution API |
+| `traefik` | Reverse proxy 80/443 |
+
+Host services: docker, containerd, tailscaled, fail2ban.
+
+### Public exposure summary
+
+| Domain | Server | Service |
+| --- | --- | --- |
+| `headscale.proclick.ai` | services | headscale (+ `/admin` = headplane) |
+| `n8n.proclick.io` | services | n8n |
+| `odoo.proclick.io`, `portal.proclick.eu` | services | odoo |
+| `openclaw.proclick.ai` | services | openclaw |
+| `traefik.proclick.io` | services | traefik dashboard |
+| proclick.hu | Cloudflare (188.114.96.x) | WordPress (separate, not in tailnet) |
+
+---
 
 ## Toolset (11 tools, from ssh-mcp v2)
 
@@ -78,6 +169,8 @@ commands are refused — that is by design, not a bug.
 - **services-proclick** — runs the headscale control server + headplane
   admin UI (container `tailscale-headplane` has its own tailnet identity
   `100.64.0.2`), plus odoo, traefik, n8n-postgres, gotenberg, browserless.
+  Docker compose lives in `/root/docker/`; backups via the `backup`
+  container (`/root/docker/backup-status.sh`).
 - **agents-proclick** — fail2ban-style rate limiting: several rapid
   failed logins temporarily lock out the IP (looks like
   "Permission denied" even with a correct password). Wait ~20s and retry;
@@ -96,3 +189,6 @@ commands are refused — that is by design, not a bug.
 - DNS `Name or service not known` → the box's own MagicDNS may be
   disabled; resolve from the Mac with `dscacheutil -q host -a name <host>`
   or ping the tailnet IP directly.
+- Node missing from `tailscale status` → check the headscale admin
+  (`headscale.proclick.ai/admin` on services) or
+  `docker exec headscale headscale nodes list` on services.
