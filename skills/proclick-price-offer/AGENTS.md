@@ -14,12 +14,14 @@ Generate a polished proClick offer using the bundled assets and the existing Rep
 - black recommendation blocks
 - pale green optimization callout
 
+Use the bundled full-team cover by default. Preserve its aspect ratio and keep every teammate in frame; place cover text in the available headroom and below faces.
+
 ## Files
 
 - `scripts/generate_offer.py` - primary editable generator
 - `assets/proclick_logo.png` - logo for light backgrounds
 - `assets/proclick_logo_white.png` - logo for dark/photo backgrounds
-- `assets/proclick_team_cover.png` - cover background
+- `assets/proclick_team_cover_full.png` - default full-team cover background
 - `references/offer-elements.md` - reusable content rules for pricing, services, focused and complete media allocation, KPIs, and validation
 - `SKILL.md` - Codex skill instructions
 

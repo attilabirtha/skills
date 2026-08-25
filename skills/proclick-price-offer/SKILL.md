@@ -24,11 +24,13 @@ Use bundled assets from `assets/` by default:
 
 - `proclick_logo.png` for light backgrounds
 - `proclick_logo_white.png` for dark/photo backgrounds
-- `proclick_team_cover.png` for default cover background
+- `proclick_team_cover_full.png` for the default full-team cover background
 
 Do not redraw the logo manually. Use these files directly.
 
-If the current offer uses a newer or wider team photo from the repo/workspace, prefer that asset over the default portrait cover. Keep the image aspect ratio intact; never stretch the cover image.
+Use the full-team cover by default. It is a portrait composition of the official proClick team photo, with every team member fully inside the frame.
+
+If the current offer uses a newer official full-team photo from the repo/workspace, prefer it over the bundled asset. Keep the image aspect ratio intact; never stretch or crop team members out of the cover image.
 
 ## Generator
 
@@ -75,7 +77,7 @@ Use this structure unless the user asks otherwise:
 - Mention CSS Partner support in the feed/Shopping service card when Google Shopping is included.
 - Keep the first-month strategy realistic: validate tracking, messages, and products sellable for promotion and sales before scaling.
 - If channels are explicitly excluded from the scope, remove them from both narrative text and channel tables.
-- On the cover, move text lower when needed so the team faces remain visible and the image stays readable.
+- On the cover, keep headline text in available headroom and pricing cards below faces. Do not obscure faces or crop team members.
 
 ## Style Rules
 

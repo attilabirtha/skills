@@ -9,6 +9,7 @@ from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
@@ -30,7 +31,7 @@ SKILL_DIR = SCRIPT_DIR.parent
 ASSETS = SKILL_DIR / "assets"
 LOGO = ASSETS / "proclick_logo.png"
 LOGO_WHITE = ASSETS / "proclick_logo_white.png"
-TEAM_COVER = ASSETS / "proclick_team_cover.png"
+TEAM_COVER = ASSETS / "proclick_team_cover_full.png"
 
 FONT_REGULAR = "/System/Library/Fonts/Supplemental/Arial.ttf"
 FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
@@ -81,7 +82,15 @@ def make_styles():
 def draw_cover(canvas, doc):
     w, h = A4
     canvas.saveState()
-    canvas.drawImage(str(TEAM_COVER), 0, 0, width=w, height=h, mask="auto")
+    # Preserve the full-team photo without distorting or cropping anyone.
+    image = ImageReader(str(TEAM_COVER))
+    image_w, image_h = image.getSize()
+    scale = min(w / image_w, h / image_h)
+    draw_w = image_w * scale
+    draw_h = image_h * scale
+    canvas.setFillColor(DARK)
+    canvas.rect(0, 0, w, h, stroke=0, fill=1)
+    canvas.drawImage(image, (w - draw_w) / 2, (h - draw_h) / 2, width=draw_w, height=draw_h, mask="auto")
     canvas.setFillColor(colors.Color(0.08, 0.08, 0.09, alpha=0.58))
     canvas.rect(0, 0, w, h, stroke=0, fill=1)
     canvas.drawImage(str(LOGO_WHITE), doc.leftMargin, h - 34 * mm, width=45 * mm, height=9 * mm, mask="auto")
