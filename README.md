@@ -56,10 +56,36 @@ Then invoke:
 Use $proclick-servers to check the servers / run a command / transfer files.
 ```
 
+### `proclick-presentation`
+
+Create proClick-branded presentations, ecommerce use-case decks, and implementation plans. Includes the base brand book, design tokens, official logos and photography, and slide layout guidance.
+
+Install for Codex:
+
+```bash
+cp -R skills/proclick-presentation ~/.codex/skills/
+```
+
+Then invoke:
+
+```text
+Use $proclick-presentation to create a branded presentation from my brief.
+```
+
+The skill provides brand and composition guidance; use the host’s presentation authoring tools to generate the deck. Standalone commercial offer PDFs remain covered by `proclick-price-offer`.
+
 ## Repository Layout
 
 ```text
 skills/
+  proclick-presentation/
+    SKILL.md
+    AGENTS.md
+    agents/openai.yaml
+    assets/
+    references/brand-book.md
+    references/slide-layouts.md
+    references/sources.json
   proclick-price-offer/
     SKILL.md
     AGENTS.md

@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "reviewedAt": "2026-09-10",
+  "liveWebsite": {
+    "url": "https://proclick.ro/",
+    "accessedAt": "2026-09-10",
+    "scope": "Positioning and contact record, not independent validation of performance claims"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "label": "Price-offer instructions",
+      "localPath": "/Users/attilabirtha.ro/.codex/skills/proclick-price-offer/SKILL.md",
+      "url": "https://github.com/attilabirtha/skills/blob/main/skills/proclick-price-offer/SKILL.md",
+      "sha256": "7780385e8f2c46006b03413f98e0b03218720c6be7f83a44054fd33ee99ec4b2"
+    },
+    {
+      "id": "S2",
+      "label": "Price-offer generator",
+      "localPath": "/Users/attilabirtha.ro/.codex/skills/proclick-price-offer/scripts/generate_offer.py",
+      "url": null,
+      "sha256": "c1dd18c59f237264e248e0b5aa56fb92c6331c51d19ac2da6a2f27ff64e84e3e"
+    },
+    {
+      "id": "S3",
+      "label": "Website design tokens",
+      "localPath": "/Users/attilabirtha.ro/Development/proclick.ro/src/styles/global.css",
+      "url": null,
+      "sha256": "acbf471673d890558b5a604113106ec21e4ad7024342a0338dd28f1042051ee4"
+    },
+    {
+      "id": "S4",
+      "label": "Agency presentation tokens",
+      "localPath": "/Users/attilabirtha.ro/Development/proclick.ro/outputs/019e8ba0-258e-7602-b316-5d13fb9d1418/presentations/proclick-agency-presentation/slides/common.mjs",
+      "url": null,
+      "sha256": "eae005bc9da7cd8882f3210a4fd8c007a03fc9907fa80f67851413032ea8a824"
+    },
+    {
+      "id": "S5",
+      "label": "Agency slide typography",
+      "localPath": "/Users/attilabirtha.ro/Development/proclick.ro/outputs/019e8ba0-258e-7602-b316-5d13fb9d1418/presentations/proclick-agency-presentation/layout/en/slide-01.layout.json",
+      "url": null,
+      "sha256": "6d709c7ea03bc31490482c1382f4ebb4bd8b0251e1c07757df4e249829242c95"
+    },
+    {
+      "id": "S6",
+      "label": "Website page source",
+      "localPath": "/Users/attilabirtha.ro/Development/proclick.ro/src/pages/index.astro",
+      "url": null,
+      "sha256": "09eb243df49b32379a4f3c75c4ce91a6462a200433c17a4aa8e5658803c83fde"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/proclick_logo_white.png",
+      "sha256": "72cbce905ee9d76cba4f0d84b466355717d7aed294ed5252dcebfb4cb49b3247"
+    },
+    {
+      "path": "assets/proclick_logo.png",
+      "sha256": "2279972bf9053e25f0884c95b893fdb1936dfef28a280244d8399b88d82778ff"
+    },
+    {
+      "path": "assets/proclick_team_wide.jpg",
+      "sha256": "ebfd15108bf59a9af5da9e209d292b133e0edfd27f81deef43a277949a88754d"
+    },
+    {
+      "path": "assets/proclick_team_cover_full.png",
+      "sha256": "a1a485ad05627dd4d094149a90c2b2ce974059076ba1b9c9111d915c064b893b"
+    }
+  ],
+  "newDecisions": [
+    "Default presentation mode",
+    "Logo clear space",
+    "Suggested type scale",
+    "Contrast guidance",
+    "Screenshot conventions",
+    "Format routing"
+  ]
+}

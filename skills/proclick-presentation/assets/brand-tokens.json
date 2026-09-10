@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "reviewedAt": "2026-09-10",
+  "brand": "proClick",
+  "defaultMode": "presentation",
+  "modes": {
+    "presentation": {
+      "primary": "#E84C3C",
+      "paper": "#F7F2EA",
+      "ink": "#151312",
+      "dark": "#252220",
+      "muted": "#766D63",
+      "border": "#D9CFC2",
+      "recommendation": "#DCEFE5",
+      "positive": "#2B8C63",
+      "palePrimary": "#FBE4DF",
+      "white": "#FFFFFF"
+    },
+    "offer": {
+      "primary": "#EF493E",
+      "paper": "#F4EFE7",
+      "ink": "#24211F",
+      "dark": "#24211F",
+      "muted": "#77706A",
+      "border": "#D7CEC3",
+      "recommendation": "#D9EDE1",
+      "white": "#FFFFFF"
+    },
+    "web": {
+      "primary": "#E64938",
+      "paper": "#FFFFFF",
+      "ink": "#1A1A2E",
+      "dark": "#1A1A2E",
+      "muted": "#666666",
+      "border": "#E0E0E0",
+      "secondarySurface": "#F8F9FA",
+      "accent": "#E84C3C"
+    }
+  },
+  "typography": {
+    "presentation": {
+      "heading": "Aptos Display",
+      "body": "Aptos",
+      "fallback": "Arial"
+    },
+    "offer": {
+      "body": "Arial",
+      "bold": "Arial Bold"
+    },
+    "web": {
+      "stack": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    }
+  },
+  "productionDefaults": {
+    "status": "New guidance, not historical corporate specifications",
+    "canvas": {
+      "width": 1280,
+      "height": 720,
+      "unit": "css_px_96dpi"
+    },
+    "fontSizePx": {
+      "cover": [
+        56,
+        72
+      ],
+      "heading": [
+        42,
+        50
+      ],
+      "body": [
+        24,
+        30
+      ],
+      "secondary": [
+        20,
+        24
+      ],
+      "notes": [
+        16,
+        18
+      ]
+    },
+    "marginPx": [
+      64,
+      72
+    ],
+    "logoWidthPx": [
+      140,
+      162
+    ],
+    "logoClearSpaceRatioOfHeight": 0.5
+  },
+  "contact": {
+    "entity": "INTELLIGENT DIGITAL MARKETING SRL",
+    "cui": "RO16554762",
+    "address": "Piața Victoriei nr. 5, Târgu-Mureș, Romania",
+    "email": "contact@proclick.ro",
+    "phone": "+40 744 692 880",
+    "website": "https://proclick.ro/"
+  }
+}

@@ -17,6 +17,8 @@ When the user asks to use or modify a skill:
 - `skills/proclick-price-offer` - generate branded ProClick commercial offer PDFs.
 - `skills/proclick-servers` - SSH access to Proclick's servers (services-proclick, agents-proclick) and the birtha home server via the ssh-mcp toolset.
 
+- `skills/proclick-presentation` - create proClick-branded decks using the bundled brand book and official assets.
+
 ## Validation
 
 For Codex skills, validate with Codex's `quick_validate.py` when available:

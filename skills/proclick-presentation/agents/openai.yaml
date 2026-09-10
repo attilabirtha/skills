@@ -1,0 +1,4 @@
+interface:
+  display_name: "proClick Presentation"
+  short_description: "Create proClick decks using the brand book"
+  default_prompt: "Use $proclick-presentation to create a branded presentation from my brief and reference materials."
