@@ -60,58 +60,43 @@ real examples, and explicit anti-pattern lists. Do not invent the voice — copy
 5. If the mail is a meeting brief, proposal, or agenda — longer **by design** — keep the
    greeting, the direct asks and the signature block; only the middle expands.
 
-## Signature — canonical source, never re-typed
+## Signature — always fetch, never copy
 
-The signature is **HTML maintained with the website**, not text to be composed:
+The signature is **HTML maintained with the website** and it changes over time.
+**Never copy its values into a draft, and never hardcode them here.** Render it at write time:
+
+```bash
+~/.opencode/skill/birtha-writing-style/scripts/get-signature.sh          # attila (default)
+~/.opencode/skill/birtha-writing-style/scripts/get-signature.sh hunor    # any colleague
+```
+
+It fetches the published file and prints a plain-text block ready to paste as the
+email signature. Source order: **live site → local checkout fallback**.
+
+### Canonical artefact
 
 | | |
 |---|---|
-| GitHub | `attilabirtha/proclick.ro` → `public/signatures/attila.html` |
-| Local | `~/Development/proclick.ro/public/signatures/attila.html` |
-| Live | https://www.proclick.eu/signatures/attila.html (assets under `/signatures/assets/`) |
+| GitHub | `attilabirtha/proclick.ro` → `public/signatures/*.html` |
+| Local | `~/Development/proclick.ro/public/signatures/` |
+| Live | `https://www.proclick.eu/signatures/attila` |
 
-Team variants sit beside it: `hunor.html`, `claudiu.html`, `paula.html`, `daniela.html`,
-`andras.html`, `antonia.html`, plus an identical legacy `attila_birtha.html`.
-**Read the file; do not invent the block.**
+Team variants sit alongside: `hunor`, `claudiu`, `paula`, `daniela`, `andras`, `antonia`,
+plus a legacy `attila_birtha`.
 
-### What it contains
+### Things that are easy to get wrong
 
-Two-column table — portrait (`attila.jpg`, 120×120) with a `#E84C3C` divider — then the
-proClick logo (`proclick2x.png`, 96×30) and:
-
-```
-Managing Partner          (bold)
-Mobile: +40 744 692 880
-Office: +40 365 730 268
-Email:  attila.birtha@proclick.eu
-Address: P-ța Victoriei nr. 5, Târgu Mureș, ROMANIA
-Follow us on: <facebook> <instagram> <twitter> <linkedin>   (20×20 icon images)
-```
-
-Two things that are easy to get wrong:
-- The signature address is **`@proclick.eu`**, even though he sends from `@proclick.ro`.
-  Use the signature's value when reproducing the block.
-- **Office: +40 365 730 268** is part of the signature — do not drop it.
-
-### Plain-text rendering (for API-created drafts)
-
-Gmail does **not** apply the HTML signature to drafts created through the API, so render it:
-
-```
-Attila Birtha
-Managing Partner
-Mobile: +40 744 692 880
-Office: +40 365 730 268
-Email: attila.birtha@proclick.eu
-Address: P-ța Victoriei nr. 5, Târgu Mureș, ROMANIA
-Follow us on: https://www.facebook.com/proclick.eu | https://www.instagram.com/proclick_eu/ | https://twitter.com/proClick_eu | http://www.linkedin.com/company/3019254
-```
-
-### Seasonal logo
-
-`assets/` holds `proclick2x.png` plus `proclick2x-xmas.png` and `proclick2x-hearts.png`.
-The HTML references `proclick2x.png`; the seasonal file is swapped in for campaigns.
-Leave the filename alone.
+- The site **308-redirects** `/signatures/<name>.html` → `/signatures/<name>`. Follow it
+  (the script does).
+- The block is a two-column HTML table: portrait with an `#E84C3C` divider, the proClick
+  logo, then the detail lines and social icons.
+- **The signature's email may differ from the address he sends from.** Use whatever the
+  script prints — do not "correct" it.
+- `assets/` carries **seasonal logo variants** (`proclick2x-xmas.png`,
+  `proclick2x-hearts.png`). The HTML picks one; don't substitute filenames.
+- Gmail does **not** apply the HTML signature to API-created drafts — that is why we render
+  text. When he sends from the Gmail UI, its own signature may also apply; flag a possible
+  duplicate rather than guessing.
 
 ## Language of the record
 

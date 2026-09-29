@@ -45,30 +45,23 @@ The EN shortcuts **"u"** and **"Thx"** are in-character — do not "correct" the
 
 ---
 
-## Signature (always present, never re-typed)
+## Signature (always present — fetch it, never copy)
 
-Canonical **HTML** lives with the site — see SKILL.md:
+The signature is **HTML maintained with the site and it changes**, so it is not reproduced
+here. Render it at write time:
 
-- GitHub: `attilabirtha/proclick.ro` → `public/signatures/attila.html`
-- Local: `~/Development/proclick.ro/public/signatures/attila.html`
-- Live: https://www.proclick.eu/signatures/attila.html
-
-Plain-text rendering for API-created drafts (Gmail does not apply HTML signatures to drafts):
-
-```
-Attila Birtha
-Managing Partner
-Mobile: +40 744 692 880
-Office: +40 365 730 268
-Email: attila.birtha@proclick.eu
-Address: P-ța Victoriei nr. 5, Târgu Mureș, ROMANIA
-Follow us on: https://www.facebook.com/proclick.eu | https://www.instagram.com/proclick_eu/ | https://twitter.com/proClick_eu | http://www.linkedin.com/company/3019254
+```bash
+~/.opencode/skill/birtha-writing-style/scripts/get-signature.sh            # attila
+~/.opencode/skill/birtha-writing-style/scripts/get-signature.sh <name>     # any colleague
 ```
 
-Note: the signature address is **`@proclick.eu`** even though he sends from `@proclick.ro`.
-`Managing Partner` is bold in the HTML.
+Canonical artefact: `attilabirtha/proclick.ro` → `public/signatures/*.html`
+(live: `https://www.proclick.eu/signatures/attila`). See SKILL.md for the full notes —
+redirects, seasonal logos, and the fact that the signature's email may differ from the
+address he sends from.
 
-The block appears on **internal** mail and on **one-word** replies — never omit it for shortness.
+The block appears on **internal** mail and on **one-word** replies — never omit it for
+shortness, and never type it from memory.
 
 ---
 
