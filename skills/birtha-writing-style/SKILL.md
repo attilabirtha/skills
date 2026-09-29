@@ -100,9 +100,10 @@ plus a legacy `attila_birtha`.
 
 ## Language of the record
 
-Anything the counterparty can see — email body, **and any calendar event or CRM record
-created alongside it** — is written in **their** language. See #9 in
-`comms-to-odoo-design.md`. Internal notes stay English.
+Anything the counterparty can see — the email body, **and any calendar event or CRM record
+created alongside it** — is written in **their** language: Romanian for RO contacts,
+Hungarian for HU contacts, English only when they write in English. Internal notes stay
+English. This applies to event titles and descriptions, not just the mail.
 
 ## Reference
 
