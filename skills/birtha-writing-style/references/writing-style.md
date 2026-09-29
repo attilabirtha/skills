@@ -45,28 +45,30 @@ The EN shortcuts **"u"** and **"Thx"** are in-character — do not "correct" the
 
 ---
 
-## Signature block (verbatim, always)
+## Signature (always present, never re-typed)
+
+Canonical **HTML** lives with the site — see SKILL.md:
+
+- GitHub: `attilabirtha/proclick.ro` → `public/signatures/attila.html`
+- Local: `~/Development/proclick.ro/public/signatures/attila.html`
+- Live: https://www.proclick.eu/signatures/attila.html
+
+Plain-text rendering for API-created drafts (Gmail does not apply HTML signatures to drafts):
 
 ```
-https://www.proclick.eu/
-
 Attila Birtha
-
 Managing Partner
-
 Mobile: +40 744 692 880
-
-Email: attila.birtha@proclick.ro
-
+Office: +40 365 730 268
+Email: attila.birtha@proclick.eu
 Address: P-ța Victoriei nr. 5, Târgu Mureș, ROMANIA
-
-Follow us on:  https://www.facebook.com/proclick.eu
-https://www.instagram.com/proclick_eu/  https://twitter.com/proClick_eu
-http://www.linkedin.com/company/3019254
+Follow us on: https://www.facebook.com/proclick.eu | https://www.instagram.com/proclick_eu/ | https://twitter.com/proClick_eu | http://www.linkedin.com/company/3019254
 ```
 
-`Managing Partner` is sometimes bold. The block appears on **internal** mail and on
-**one-word** replies — do not omit it for shortness.
+Note: the signature address is **`@proclick.eu`** even though he sends from `@proclick.ro`.
+`Managing Partner` is bold in the HTML.
+
+The block appears on **internal** mail and on **one-word** replies — never omit it for shortness.
 
 ---
 

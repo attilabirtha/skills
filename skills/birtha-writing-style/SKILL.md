@@ -60,31 +60,58 @@ real examples, and explicit anti-pattern lists. Do not invent the voice — copy
 5. If the mail is a meeting brief, proposal, or agenda — longer **by design** — keep the
    greeting, the direct asks and the signature block; only the middle expands.
 
-## Signature block (verbatim)
+## Signature — canonical source, never re-typed
+
+The signature is **HTML maintained with the website**, not text to be composed:
+
+| | |
+|---|---|
+| GitHub | `attilabirtha/proclick.ro` → `public/signatures/attila.html` |
+| Local | `~/Development/proclick.ro/public/signatures/attila.html` |
+| Live | https://www.proclick.eu/signatures/attila.html (assets under `/signatures/assets/`) |
+
+Team variants sit beside it: `hunor.html`, `claudiu.html`, `paula.html`, `daniela.html`,
+`andras.html`, `antonia.html`, plus an identical legacy `attila_birtha.html`.
+**Read the file; do not invent the block.**
+
+### What it contains
+
+Two-column table — portrait (`attila.jpg`, 120×120) with a `#E84C3C` divider — then the
+proClick logo (`proclick2x.png`, 96×30) and:
 
 ```
-https://www.proclick.eu/
-
-Attila Birtha
-
-Managing Partner
-
+Managing Partner          (bold)
 Mobile: +40 744 692 880
-
-Email: attila.birtha@proclick.ro
-
+Office: +40 365 730 268
+Email:  attila.birtha@proclick.eu
 Address: P-ța Victoriei nr. 5, Târgu Mureș, ROMANIA
-
-Follow us on:  https://www.facebook.com/proclick.eu
-https://www.instagram.com/proclick_eu/  https://twitter.com/proClick_eu
-http://www.linkedin.com/company/3019254
+Follow us on: <facebook> <instagram> <twitter> <linkedin>   (20×20 icon images)
 ```
 
-## Gotcha
+Two things that are easy to get wrong:
+- The signature address is **`@proclick.eu`**, even though he sends from `@proclick.ro`.
+  Use the signature's value when reproducing the block.
+- **Office: +40 365 730 268** is part of the signature — do not drop it.
 
-When drafting through the Gmail API, his Gmail **auto-signature is not applied** — so the
-block must be written into the body, as above. Flag a possible duplicate signature if he
-sends from the Gmail UI with its own signature enabled.
+### Plain-text rendering (for API-created drafts)
+
+Gmail does **not** apply the HTML signature to drafts created through the API, so render it:
+
+```
+Attila Birtha
+Managing Partner
+Mobile: +40 744 692 880
+Office: +40 365 730 268
+Email: attila.birtha@proclick.eu
+Address: P-ța Victoriei nr. 5, Târgu Mureș, ROMANIA
+Follow us on: https://www.facebook.com/proclick.eu | https://www.instagram.com/proclick_eu/ | https://twitter.com/proClick_eu | http://www.linkedin.com/company/3019254
+```
+
+### Seasonal logo
+
+`assets/` holds `proclick2x.png` plus `proclick2x-xmas.png` and `proclick2x-hearts.png`.
+The HTML references `proclick2x.png`; the seasonal file is swapped in for campaigns.
+Leave the filename alone.
 
 ## Language of the record
 
