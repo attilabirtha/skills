@@ -47,7 +47,9 @@ real examples, and explicit anti-pattern lists. Do not invent the voice — copy
 |---|---|---|
 | RO formal (new/external client) | `Bună ziua,` | yes — *"Bună ziua… săptămâna"* |
 | RO informal (partner, vendor, support) | `Salut,` / `Salut!` | dropped — *"Atasat regasesti… saptamana"* |
-| Hungarian contact | `Szia,` | usually dropped |
+| HU — **new** contact | `Jó napot,` | yes (formal) |
+| HU — already known | `Szia,` | usually dropped |
+| HU — personal | `Szia` | dropped |
 | English | `Hi <FirstName>,` or `<FirstName>,` | `Thx`, `u` are in-character |
 | Internal colleague | **none** | subject carries the message; body often empty |
 

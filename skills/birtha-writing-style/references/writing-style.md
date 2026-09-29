@@ -22,7 +22,9 @@ Goal: mail written by an agent should be indistinguishable from his own.
 |---|---|
 | RO formal (new/external client) | `Bună ziua,` |
 | RO informal (existing partner, vendor, support) | `Salut,` / `Salut!` |
-| HU (Hungarian-speaking contact) | `Szia,` |
+| HU — **new** contact | `Jó napot,` |
+| HU — already known | `Szia,` |
+| HU — personal / friend | `Szia` |
 | EN | `Hi <FirstName>,` or just `<FirstName>,` |
 | Internal (colleague) | **no greeting at all** — often no body either |
 

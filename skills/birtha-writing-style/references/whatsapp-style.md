@@ -45,6 +45,9 @@ ASCII only, and much shorter. Do not carry email formality over.
 `Szeva.` · `Szeva` · `hali` · `Hali.` · `hy` · `hi` · `Hi` · `Szia.` · `szia.` ·
 `Salut,` · `Buna dimineata` · `Jo reggelt`
 
+Hungarian: **`Szia`** for anyone he already knows, and for personal contacts. A **new**
+Hungarian contact gets the formal **`Jó napot,`** instead — never `Szia`.
+
 Sometimes the greeting fuses with the message — **no space**: `szia.meddig?`
 
 ---
