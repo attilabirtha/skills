@@ -1,11 +1,12 @@
 ---
 name: birtha-writing-style
 description: |
-  Write emails and client messages in Attila Birtha's personal voice — terse, direct,
-  no closing line, always signed. Covers Romanian (formal and informal), Hungarian and English.
+  Write emails and WhatsApp messages in Attila Birtha's personal voice — terse and direct,
+  register-matched per channel. Covers Romanian (formal and informal), Hungarian and English.
 
   Triggers when asked to:
   - "draft an email", "write to <client>", "reply to this", "follow up with <client>"
+  - "draft a WhatsApp reply", "reply on WhatsApp", "message <person>"
   - "write it in my style", "in Attila's voice", "make it sound like me"
   - draft any outbound mail on behalf of proclick.eu / proclick.ro / birtha.ro
 ---
@@ -14,10 +15,21 @@ description: |
 
 Applies to **any outbound email or message** written on Attila's behalf, in any language.
 
+## Channel matters more than the person
+
+He is a **different writer per channel**. Pick the register first, then read that reference.
+
+| Channel | Register | Signature | Reference |
+|---|---|---|---|
+| **Email** | formal/informal by counterparty | **always** | `references/writing-style.md` |
+| **WhatsApp** | terse — median **3 words** | **never** | `references/whatsapp-style.md` |
+
+Do not carry email formality into WhatsApp, or WhatsApp terseness into a client email.
+
 ## Before writing
 
-Read `references/writing-style.md`. It contains per-type templates, the register table,
-real examples, and an explicit anti-pattern list. Do not invent the voice — copy it.
+Read the reference for the channel. They contain per-type templates, measured stats,
+real examples, and explicit anti-pattern lists. Do not invent the voice — copy it.
 
 ## Non-negotiables
 
@@ -82,4 +94,6 @@ created alongside it** — is written in **their** language. See #9 in
 
 ## Reference
 
-- `references/writing-style.md` — full style guide with templates and anti-patterns.
+- `references/writing-style.md` — email: full guide with templates and anti-patterns.
+- `references/whatsapp-style.md` — WhatsApp: measured 3-word style, smiley conventions,
+  language mixing, no-signature rule.
