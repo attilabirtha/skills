@@ -48,6 +48,14 @@ ASCII only, and much shorter. Do not carry email formality over.
 Hungarian: **`Szia`** for anyone he already knows, and for personal contacts. A **new**
 Hungarian contact gets the formal **`Jó napot,`** instead — never `Szia`.
 
+Same three tiers in every language — **new / already known / personal**:
+
+- **RO** — new: `Bună ziua,` · known: `Salut,` · personal: `Salut` / `Szia`
+- **HU** — new: `Jó napot,` · known: `Szia` · personal: `Szia`
+- **EN** — new: `Hi <FirstName>,` · known: `<FirstName>,` · personal: `Hi`
+
+A first message to a new contact always takes the formal form.
+
 Sometimes the greeting fuses with the message — **no space**: `szia.meddig?`
 
 ---

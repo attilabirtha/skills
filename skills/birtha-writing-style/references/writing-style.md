@@ -18,14 +18,19 @@ Goal: mail written by an agent should be indistinguishable from his own.
 
 ## Greeting by register
 
-| Register | Greeting |
+Greeting is chosen by **relationship**, not by language — the same three tiers in RO, HU and EN.
+
+| Situation | Greeting |
 |---|---|
-| RO formal (new/external client) | `Bună ziua,` |
-| RO informal (existing partner, vendor, support) | `Salut,` / `Salut!` |
-| HU — **new** contact | `Jó napot,` |
-| HU — already known | `Szia,` |
-| HU — personal / friend | `Szia` |
-| EN | `Hi <FirstName>,` or just `<FirstName>,` |
+| **RO** — new contact | `Bună ziua,` |
+| **RO** — already known (partner, vendor, support) | `Salut,` / `Salut!` |
+| **RO** — personal | `Salut` / `Szia` (he mixes) |
+| **HU** — new contact | `Jó napot,` |
+| **HU** — already known | `Szia,` |
+| **HU** — personal / friend | `Szia` |
+| **EN** — new contact | `Hi <FirstName>,` |
+| **EN** — already known | `<FirstName>,` |
+| **EN** — personal | `Hi` / `<FirstName>` |
 | Internal (colleague) | **no greeting at all** — often no body either |
 
 **Closings:** usually **none**. When casual: `Koszi`, `Thx`.
@@ -124,7 +129,10 @@ shortness, and never type it from memory.
 ## Anti-patterns — he never does this
 
 - ❌ More than ~3 sentences in the body
+- ❌ **`Dear …`** — never used, not even in English to a new contact. `Hi <FirstName>,` is his
+  most formal English opener.
 - ❌ "I hope this email finds you well" / "Sper că sunteți bine"
+- ❌ `Szia` / `Salut` as the opening word to a **new** contact
 - ❌ Re-summarising the thread back to the reader
 - ❌ A closing line ("Best regards", "Cu stimă") — **except** a deliberately formal letter
 - ❌ Long apologies — `Din păcate, …` and move on

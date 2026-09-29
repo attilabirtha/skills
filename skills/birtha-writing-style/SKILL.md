@@ -43,15 +43,20 @@ real examples, and explicit anti-pattern lists. Do not invent the voice — copy
 
 ## Match the register
 
-| Counterparty | Greeting | Diacritics |
+Greeting is chosen by **relationship**, not by language — the same three tiers apply in RO, HU and EN.
+
+| Situation | Greeting | Notes |
 |---|---|---|
-| RO formal (new/external client) | `Bună ziua,` | yes — *"Bună ziua… săptămâna"* |
-| RO informal (partner, vendor, support) | `Salut,` / `Salut!` | dropped — *"Atasat regasesti… saptamana"* |
-| HU — **new** contact | `Jó napot,` | yes (formal) |
-| HU — already known | `Szia,` | usually dropped |
-| HU — personal | `Szia` | dropped |
-| English | `Hi <FirstName>,` or `<FirstName>,` | `Thx`, `u` are in-character |
-| Internal colleague | **none** | subject carries the message; body often empty |
+| **RO** — new contact | `Bună ziua,` | formal; diacritics kept |
+| **RO** — already known | `Salut,` / `Salut!` | partner, vendor, support; diacritics dropped |
+| **RO** — personal | `Salut` / `Szia` | he mixes the two |
+| **HU** — new contact | `Jó napot,` | formal; diacritics kept |
+| **HU** — already known | `Szia,` | diacritics usually dropped |
+| **HU** — personal | `Szia` | |
+| **EN** — new contact | `Hi <FirstName>,` | **never `Dear`** — see anti-patterns |
+| **EN** — already known | `<FirstName>,` | no greeting word at all |
+| **EN** — personal | `Hi` / `<FirstName>` | |
+| Internal colleague | **none** | subject carries it; body often empty |
 
 ## Drafting procedure
 
