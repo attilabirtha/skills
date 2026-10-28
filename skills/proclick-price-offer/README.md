@@ -1,6 +1,6 @@
 # ProClick Price Offer Skill
 
-Reusable AI-agent skill for generating ProClick-style commercial offer PDFs.
+Reusable AI-agent skill for generating ProClick-style commercial offer PDFs: recurring PPC engagements, standalone audits, fixed-scope implementations or migrations, and contract appendices.
 
 ## Quick Start
 
