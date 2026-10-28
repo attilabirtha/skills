@@ -33,7 +33,11 @@ One editable chart or table with a conclusion the data actually supports. Title,
 
 ## Commercial scope
 
-Use an editable table when packages or cost components need comparison. Keep setup, recurring service, usage and media costs separate if they apply. Show tax basis and currency. Include only categories present in the brief. Use the price-offer skill for a standalone offer PDF, not as the slide-writing engine.
+Use an editable table when packages or cost components need comparison. Keep setup, first-month service, recurring service, fixed project, usage, and media costs separate if they apply. Label each amount with its period and payer, then show tax basis and currency. Include only categories present in the brief.
+
+For an audit decision deck, favour a systems / access / deliverables / handoff table over a generic channel or budget slide. For an implementation or migration decision deck, favour outcome / phase / client dependency / exclusion columns. A recurring PPC deck can use a scope / service / media-payment-path table when it makes the commercial choice clearer.
+
+Use the price-offer skill for a standalone offer PDF, payment schedule, or appendix, not as the slide-writing engine. Keep conditional audit credits, waiver triggers, and detailed commercial terms in that document unless the brief asks to present them.
 
 ## Decision / close
 

@@ -25,6 +25,15 @@ Use the bundled official logos and photography. Inspect a supplied screenshot, p
 6. Put sources for claims and assets in slide notes, and visible assumptions beside any claim that depends on them. Review typography, source fidelity, image proportions, text fit, and factual consistency on every rendered slide.
 7. Save a new version unless replacement is requested. Return the actual requested deck. Add a PDF companion only when requested or useful to the brief.
 
+## Commercial presentations
+
+Use a deck to help an audience understand and decide on a proposed engagement. Use `proclick-price-offer` for the standalone commercial offer PDF, payment schedule, or contractual appendix.
+
+- Match the commercial narrative to the actual engagement: recurring PPC, a standalone audit, a fixed-scope implementation/migration, or a continuation after a completed audit.
+- On a pricing or scope slide, distinguish one-time, first-month, recurring, project, and media/platform amounts by both period and payer. State currency and tax basis; do not assign agency tax treatment to media paid directly to a platform.
+- For an audit, show systems, access level, deliverables, and the decision or handoff that follows. For a project, show outcomes, assumptions, client dependencies, phases, and exclusions. Show detailed payment milestones only when they are part of the approved brief.
+- Do not imply that a deck replaces the commercial offer. Any conditional audit credit, fee waiver, scope change, or support limit belongs in the offer or appendix unless the user explicitly asks to present it.
+
 ## Brand-specific decisions
 
 - Write the brand as **proClick** in prose. Use the original raster logo instead of recreating the wordmark with text, drawing it, or asking an image model to regenerate it.
