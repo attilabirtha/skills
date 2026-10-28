@@ -25,8 +25,11 @@ Use the bundled raster wordmarks; never redraw or generate the proClick logo.
 - `assets/proclick_logo_white.png` is for charcoal or sufficiently dark photography.
 - `assets/proclick_team_wide.jpg` is the default landscape team image.
 - `assets/proclick_team_cover_full.png` is a portrait full-team composition.
+- `assets/originals/` contains the supplied master logo formats: Illustrator (`.ai`), SVG, PDF, and PNG variants. Read its manifest before selecting a source file.
 
 Preserve logo and photo aspect ratios. Keep headline copy clear of faces and do not crop teammates out to force a layout.
+
+Prefer an original SVG for a scalable web or design target when the target supports it. Keep Illustrator and PDF originals unchanged; use the standard PNGs when the output pipeline needs a verified raster asset.
 
 ## Working rules
 
