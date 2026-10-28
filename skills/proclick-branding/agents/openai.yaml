@@ -1,0 +1,4 @@
+interface:
+  display_name: "proClick Branding"
+  short_description: "Apply proClick identity across branded work"
+  default_prompt: "Use $proclick-branding to apply the proClick brand system to my artifact."
