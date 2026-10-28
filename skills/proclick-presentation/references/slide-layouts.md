@@ -8,7 +8,7 @@ Use a short subject title and one clarifying line. Official logo at a natural an
 
 ### Commercial service-deck cover
 
-For a new proClick service briefing with no supplied visual direction, use the price-offer-inspired cover as the default: the wide official team photo covers the 16:9 canvas, a dark overlay protects editable white text, the white logo sits at the upper right, and a short coral rule introduces the title. A compact three-part band may summarize actual service dimensions from the brief. Use the band only when each section has a real, distinct meaning. Do not add price, delivery duration, or outcome metrics unless the user supplies them. If a free audit applies only to current proClick clients, state that eligibility on the cover.
+For a new proClick service briefing with no supplied visual direction, use the Email Marketing commercial-cover master: the wide official team photo covers the 16:9 canvas, a charcoal overlay of roughly 55–60% opacity protects editable white text, the white logo sits at the upper right, and a coral rule plus offer/audit kicker introduce the title. Keep the title to two lines, add one concise explanatory line, then use a compact three-part band across the lower third. Add a clear `OBIECTIV` line below the band and a small footer/page number. Use the band only when each section has a real, distinct meaning. Do not add price, delivery duration, or outcome metrics unless the user supplies them. If a free audit applies only to current proClick clients, state that eligibility on the cover. Read [commercial-service-cover.md](commercial-service-cover.md) for the complete composition and visual quality gate.
 
 ## Editorial / explanation
 
