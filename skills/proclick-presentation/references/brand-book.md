@@ -46,9 +46,15 @@ The existing sources contain three close but distinct palettes. Do not average t
 | Dark surface | #252220 | #24211F | #1A1A2E |
 | Muted text | #766D63 | #77706A | #666666 |
 | Rules / borders | #D9CFC2 | #D7CEC3 | #E0E0E0 |
-| Recommendation surface | #DCEFE5 | #D9EDE1 | No equivalent assigned |
+| Recommendation surface | #FBE4DF | #FBE4DF | No equivalent assigned |
 
-Presentation support colors: white #FFFFFF, recommendation green #2B8C63, pale coral #FBE4DF. Website secondary surface: #F8F9FA. Website source also includes accent #E84C3C; its primary token remains #E64938.
+Presentation support colors: white #FFFFFF and pale coral #FBE4DF. Website secondary surface: #F8F9FA. Website source also includes accent #E84C3C; its primary token remains #E64938. Do not use the legacy pale-green recommendation surface in new work unless the user explicitly requests it.
+
+### Commercial service-deck profile
+
+When proClick presents a new service briefing or service offer as editable slides and the brief does not supply another visual direction, use the price-offer palette and its commercial layout language. This profile uses a dark, full-background cover with the official team image where the crop preserves every person, a white logo at the upper right, a coral rule, and editable type. It uses warm paper and charcoal interiors, thin rules, rectangular scope modules, and a warm-paper or pale-coral operational close. It does not add price, dates, outcome metrics, or client claims without explicit source material.
+
+Keep this profile separate from a standalone offer PDF. The commercial service-deck profile is for 16:9 service presentations; the price-offer skill remains responsible for commercial PDFs.
 
 ### Use and contrast
 
@@ -82,7 +88,7 @@ For slides, show one screen large enough to read. Use a separate detail slide if
 
 ## 6. Presentation grammar
 
-The agency reference uses warm cream pages, charcoal strategy pages, coral markers, white modules, thin rules, and occasional pale-green conclusions. Adapt that vocabulary to the content instead of reproducing every card and label.
+The agency reference uses warm cream pages, charcoal strategy pages, coral markers, white modules, thin rules, and optional pale-coral conclusions. The commercial service-deck profile applies the same vocabulary more directly to new service briefings. Adapt it to the content instead of reproducing every card and label.
 
 Use a full-width composition where possible. Native tables and charts should remain editable. Use a service grid when comparing actual services; use a process layout for sequential work; use a full-width screenshot for a product walkthrough. Do not make every slide a dashboard.
 

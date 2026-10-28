@@ -11,7 +11,7 @@
       "dark": "#252220",
       "muted": "#766D63",
       "border": "#D9CFC2",
-      "recommendation": "#DCEFE5",
+      "recommendation": "#FBE4DF",
       "positive": "#2B8C63",
       "palePrimary": "#FBE4DF",
       "white": "#FFFFFF"
@@ -23,7 +23,7 @@
       "dark": "#24211F",
       "muted": "#77706A",
       "border": "#D7CEC3",
-      "recommendation": "#D9EDE1",
+      "recommendation": "#FBE4DF",
       "white": "#FFFFFF"
     },
     "web": {

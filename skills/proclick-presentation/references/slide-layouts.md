@@ -6,13 +6,17 @@ Use these as compositional guidance. Coordinates below are new defaults for a 12
 
 Use a short subject title and one clarifying line. Official logo at a natural anchor. A full-width team photo can work if all team members remain visible and text stays clear of faces. Otherwise use a contained photo beside the text. Select white or standard logo for sufficient contrast. Do not automatically add partner badges, dates, pricing, or agency statistics.
 
+### Commercial service-deck cover
+
+For a new proClick service briefing with no supplied visual direction, use the price-offer-inspired cover as the default: the wide official team photo covers the 16:9 canvas, a dark overlay protects editable white text, the white logo sits at the upper right, and a short coral rule introduces the title. A compact three-part band may summarize actual service dimensions from the brief. Use the band only when each section has a real, distinct meaning. Do not add price, delivery duration, or outcome metrics unless the user supplies them. If a free audit applies only to current proClick clients, state that eligibility on the cover.
+
 ## Editorial / explanation
 
 Paper background, ink heading, 64–72 px outer margins. Title around y=90–180. One explanation and one supporting figure, or two balanced text columns. Optional coral topic label only when it adds useful navigation. Prefer enough space to scan the content without boxes around each sentence.
 
 ## Dark strategy or section break
 
-Charcoal surface, white heading, pale supporting text. Coral emphasizes the decision or key stage. Keep the amount of content lower than on a normal content slide. Pale-green recommendation treatment belongs on light backgrounds unless contrast has been checked.
+Charcoal surface, white heading, pale supporting text. Coral emphasizes the decision or key stage. Keep the amount of content lower than on a normal content slide. Use pale coral on light backgrounds for recommendations or activation steps; do not use pale green unless the user explicitly asks for it.
 
 ## Process
 
